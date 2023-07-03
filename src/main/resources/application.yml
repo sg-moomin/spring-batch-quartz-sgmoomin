@@ -1,0 +1,20 @@
+spring:
+    datasource:
+        url: jdbc:h2:mem:testdb 
+        driverClassName: org.h2.Driver
+        username: sgmoomin
+        password: 1234
+    batch:
+        job:
+            names: ${job.name:NONE}
+            enabled: false
+    quartz:
+        # quartz schema 등록
+        job-store-type: jdbc
+        job:
+            initialize-schema: always
+        # 클러스터링 구성 여부(false : 구성 안함)
+        jobStore:
+            isClustered: false
+            driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+    
