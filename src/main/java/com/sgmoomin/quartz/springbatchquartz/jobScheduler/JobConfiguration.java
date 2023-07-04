@@ -27,6 +27,7 @@ public class JobConfiguration extends QuartzJobBean {
         System.out.println("JobConfiguration Start Job 1!");
         String name = context.getJobDetail().getJobDataMap().get("Sgmoomin Job1").toString();
         System.out.println("JobConfiguration Start Job 1! : " + name);
+        
     }
     
     // @SneakyThrows
